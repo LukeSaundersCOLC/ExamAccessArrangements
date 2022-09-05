@@ -11,7 +11,8 @@
     },
     "mssql2": {
       "type": "mssql",
-      "connectionId": "ProSolution"
+      "connectionId": "ConnectionStrings:ProSolution",
+      "dynamicId": null
     }
   }
 }
