@@ -8,7 +8,7 @@ using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
 
 var builder = WebApplication.CreateBuilder(args);
-string Rosetta = builder.Configuration.GetConnectionString("ProMonitor");
+string ProMonitor = builder.Configuration.GetConnectionString("ProMonitor");
 string ProSolution = builder.Configuration.GetConnectionString("ProSolution");
 
 builder.Services.Configure<FormOptions>(x => x.ValueCountLimit = 100000);
@@ -16,7 +16,7 @@ builder.Services.Configure<FormOptions>(x => x.ValueCountLimit = 100000);
 // Add services to the container.
 builder.Services.AddDbContext<ProMonitorContext>(options =>
 {
-    options.UseSqlServer(Rosetta);
+    options.UseSqlServer(ProMonitor);
 });
 builder.Services.AddDbContext<ProSolutionContext>(options =>
 {

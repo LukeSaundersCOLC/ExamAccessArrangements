@@ -3,6 +3,16 @@
     "identityapp1": {
       "type": "identityapp",
       "dynamicId": null
+    },
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:ProMonitor",
+      "dynamicId": null
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:ProSolution",
+      "dynamicId": null
     }
   }
 }

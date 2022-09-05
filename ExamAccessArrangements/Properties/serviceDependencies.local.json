@@ -3,6 +3,18 @@
     "identityapp1": {
       "type": "identityapp.default",
       "dynamicId": null
+    },
+    "mssql1": {
+      "secretStore": "LocalSecretsFile",
+      "type": "mssql.onprem",
+      "connectionId": "ConnectionStrings:ProMonitor",
+      "dynamicId": null
+    },
+    "mssql2": {
+      "secretStore": "LocalSecretsFile",
+      "type": "mssql.onprem",
+      "connectionId": "ConnectionStrings:ProSolution",
+      "dynamicId": null
     }
   }
 }
