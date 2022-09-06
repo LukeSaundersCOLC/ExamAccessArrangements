@@ -1,5 +1,7 @@
 ﻿using ExamAccessArrangements.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace ExamAccessArrangements.Controllers
 {
@@ -12,15 +14,22 @@ namespace ExamAccessArrangements.Controllers
         private readonly string sqlpsALSInfo = "eea.spEAApsALSInfo_20220905LS @AY, @RefNo";
         private readonly ProMonitorContext _pmcontext;
         private readonly string sqlpmALSInfo = "eea.spEAApmALSInfo_20220905LS @AY, @RefNo";
-        public ExamAccessArrangementsController(ProSolutionContext pscontext, string sqlStudentInfo, string sqlEnrolmentInfo, string sqlTimetableInfo, string sqlALSInfo, ProMonitorContext pmcontext, string sqlpmALSInfo)
+        public ExamAccessArrangementsController(ProSolutionContext pscontext, ProMonitorContext pmcontext)
         {
             _pscontext = pscontext;
-            this.sqlStudentInfo = sqlStudentInfo;
-            this.sqlEnrolmentInfo = sqlEnrolmentInfo;
-            this.sqlTimetableInfo = sqlTimetableInfo;
-            this.sqlpsALSInfo = sqlALSInfo;
             _pmcontext = pmcontext;
-            this.sqlpmALSInfo = sqlpmALSInfo;
+        }
+        public IActionResult Index(string? AY,string? RefNo)
+        { ViewBag.AY = AY;
+            SqlParameter p1 = new("@AY", AY);
+            SqlParameter p2 = new("@RefNo", RefNo);
+
+            var si = _pscontext.Student.FromSqlRaw(sqlStudentInfo, p1, p2).ToList();
+            var ei = _pscontext.Enrolment.FromSqlRaw(sqlEnrolmentInfo, p1,p2).ToList();
+            var ti = _pscontext.Timetables.FromSqlRaw(sqlTimetableInfo, p1, p2).ToList();
+            var psals = _pscontext.PSALS.FromSqlRaw(sqlpsALSInfo, p1, p2).ToList();
+            var pmals = _pmcontext.PMALS.FromSqlRaw(sqlpmALSInfo, p1, p2).ToList();
+            
         }
     }
 }
