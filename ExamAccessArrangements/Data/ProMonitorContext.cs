@@ -12,6 +12,7 @@ namespace GroupProfileSummary.Data
             : base(options)
         {
         }
+        public virtual DbSet<PMALSInfo> PMALS { get; set; } = null!;
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

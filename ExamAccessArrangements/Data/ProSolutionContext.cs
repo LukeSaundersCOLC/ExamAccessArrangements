@@ -12,6 +12,10 @@ namespace GroupProfileSummary.Data
             : base(options)
         {
         }
+        public virtual DbSet<StudentInfo> Student { get; set; } = null!;
+        public virtual DbSet<EnrolmentInfo> Enrolment { get; set; } = null!;
+        public virtual DbSet<TimetableInfo> Timetables { get; set; } = null!;
+        public virtual DbSet<PSALSInfo> PSALS { get; set; } = null!;
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
