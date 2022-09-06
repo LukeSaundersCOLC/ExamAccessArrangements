@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using ExamAccessArrangements.Models;
+﻿using ExamAccessArrangements.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace GroupProfileSummary.Data
 {
