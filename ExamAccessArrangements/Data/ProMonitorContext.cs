@@ -1,7 +1,7 @@
 ﻿using ExamAccessArrangements.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace GroupProfileSummary.Data
+namespace ExamAccessArrangements.Data
 {
     public partial class ProMonitorContext : DbContext
     {

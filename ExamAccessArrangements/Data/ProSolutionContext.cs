@@ -1,7 +1,7 @@
 ﻿using ExamAccessArrangements.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace GroupProfileSummary.Data
+namespace ExamAccessArrangements.Data
 {
     public partial class ProSolutionContext : DbContext
     {
@@ -13,6 +13,6 @@ namespace GroupProfileSummary.Data
         public virtual DbSet<EnrolmentInfo> Enrolment { get; set; } = null!;
         public virtual DbSet<TimetableInfo> Timetables { get; set; } = null!;
         public virtual DbSet<PSALSInfo> PSALS { get; set; } = null!;
-        
+
     }
 }

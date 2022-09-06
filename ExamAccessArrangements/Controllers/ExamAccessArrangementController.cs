@@ -1,4 +1,4 @@
-﻿using GroupProfileSummary.Data;
+﻿using ExamAccessArrangements.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExamAccessArrangements.Controllers

@@ -1,4 +1,4 @@
-using GroupProfileSummary.Data;
+using ExamAccessArrangements.Data;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.Features;
