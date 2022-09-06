@@ -29,7 +29,7 @@ namespace ExamAccessArrangements.Controllers
             var ti = _pscontext.Timetables.FromSqlRaw(sqlTimetableInfo, p1, p2).ToList();
             var psals = _pscontext.PSALS.FromSqlRaw(sqlpsALSInfo, p1, p2).ToList();
             var pmals = _pmcontext.PMALS.FromSqlRaw(sqlpmALSInfo, p1, p2).ToList();
-            
+            return View();
         }
     }
 }
