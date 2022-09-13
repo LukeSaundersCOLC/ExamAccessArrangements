@@ -32,6 +32,10 @@ namespace ExamAccessArrangements.Controllers
         {
             return View();
         }
+        public IActionResult ReferralSuccess()
+        {
+            return View();
+        }
 
         [AllowAnonymous]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
