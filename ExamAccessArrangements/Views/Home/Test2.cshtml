@@ -1,0 +1,67 @@
+﻿<p>
+    EAA
+</p>
+<div class="DivSec3" style="padding:5px;"><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Assessment</a></div>
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel">Assessment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="was-validated">
+                    <div class="mb-3">
+                        <select class="form-select" required aria-label="select example">
+                            <option value="" hidden>Select a Statement</option>
+                            <option value="1">Statement 1 </option>
+                            <option value="2">Statement 2</option>
+                            <option value="3">Statement 3</option>
+                            <option value="3">Statement 4</option>
+                        </select>
+                        <div class="invalid-feedback">Please Select a Statement</div>
+                    </div>
+                    <div class="form-check"> 
+                        <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required onclick="toggleValidationTextarea()" value="Work">
+                        <label class="form-check-label" for="validationFormCheck2">Statements Tried and Tested</label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required onclick="toggleValidationTextarea()" value="NoWork">
+                        <label class="form-check-label" for="validationFormCheck3">Statement Tried and Didn't Work'</label>
+                        <div class="invalid-feedback">More example invalid feedback text</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="validationTextarea" class="form-label" hidden>Why didn't it work?</label>
+                        <textarea class="form-control" id="validationTextarea" placeholder="'Explain in good detail, why it didn't work'" hidden></textarea>
+                        <div class="invalid-feedback">
+                            Please add an explantion.
+                        </div>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+                        <label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
+                        <div class="invalid-feedback">Example invalid feedback text</div>
+                    </div>         
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="submit" >Submit</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        function toggleValidationTextarea() {
+            var obj = $("input[type='radio'][name='radio-stacked']:checked").val();
+        var txt = document.getElementById("validationTextarea");
+            if (obj == 'NoWork') {
+                txt.hidden = false;
+                txt.required = true;
+            }
+            if (obj == 'Work') {
+                txt.hidden = true;
+                txt.required = false;
+            }
+        }
+
+    </script>
