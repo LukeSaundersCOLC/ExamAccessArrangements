@@ -1,18 +1,67 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+.GroupSummary {
+    display: inline-table;
+    width: AUTO;
+    min-width: max-content;
+    outline: solid 1px;
+}
+
+.TableHeaders {
+    outline: solid 1px;
+    display: inline-table;
+    padding: 5px;
+    min-width: 100px;
+    width: 175px;
+    max-height: 50px;
+}
+
+.TableRow {
+    display: inline-grid;
+    height: 50px;
+    width: auto;
+}
+
+.Thumbnails {
+    margin-top: 10px;
+    display: inline-flex;
+    margin-left: 40px;
+}
+
+.GroupSumTable {
+    width: 200px;
+    height: 250px;
+}
+
+.DivSec3 {
+    text-align: center;
+    font-size: small;
+}
+
+.DivSec4 {
+    text-align: left;
+    font-size: small;
+    padding: 4px;
+}
+
+.StudentInfo {
+    text-align: center;
+    font-size: small;
 }

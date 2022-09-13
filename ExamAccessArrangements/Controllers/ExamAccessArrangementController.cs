@@ -19,31 +19,19 @@ namespace ExamAccessArrangements.Controllers
             _pscontext = pscontext;
             _pmcontext = pmcontext;
         }
-        public IActionResult Index(string? AY,string? RefNo)
-        { ViewBag.AY = AY;
-            SqlParameter p1 = new("@AY", AY);
-            SqlParameter p2 = new("@RefNo", RefNo);
-
-            var si = _pscontext.Student.FromSqlRaw(sqlStudentInfo, p1, p2).ToList();
-            var ei = _pscontext.Enrolment.FromSqlRaw(sqlEnrolmentInfo, p1,p2).ToList();
-            var ti = _pscontext.Timetables.FromSqlRaw(sqlTimetableInfo, p1, p2).ToList();
-            var psals = _pscontext.PSALS.FromSqlRaw(sqlpsALSInfo, p1, p2).ToList();
-            var pmals = _pmcontext.PMALS.FromSqlRaw(sqlpmALSInfo, p1, p2).ToList();
-            
         }
-        public IActionResult Index(string? AY, string? RefNo, string? SD)
-        {
-            ViewBag.AY = AY;
-            SqlParameter p1 = new("@AY", AY);
-            SqlParameter p2 = new("@RefNo", RefNo);
-            SqlParameter p3 = new("@SD", SD);
+        //public IActionResult Index(string? AY, string? RefNo, string? SD)
+        //{
+        //    ViewBag.AY = AY;
+        //    SqlParameter p1 = new("@AY", AY);
+        //    SqlParameter p2 = new("@RefNo", RefNo);
+        //    SqlParameter p3 = new("@SD", SD);
            
-            var s = _pscontext.Student.FromSqlRaw(sqlStudentInfo, p1, p2,p3).ToList();
-            var e = _pscontext.Enrolment.FromSqlRaw(sqlEnrolmentInfo, p1, p2,p3).ToList();
-            var t = _pscontext.Timetables.FromSqlRaw(sqlTimetableInfo, p1, p2).ToList();
-            var psals = _pscontext.PSALS.FromSqlRaw(sqlpsALSInfo, p1, p2).ToList();
-            var pmals = _pmcontext.PMALS.FromSqlRaw(sqlpmALSInfo, p1, p2).ToList();
-            return View();
-        }
-    }
+        //    var s = _pscontext.Student.FromSqlRaw(sqlStudentInfo, p1, p2,p3).ToList();
+        //    var e = _pscontext.Enrolment.FromSqlRaw(sqlEnrolmentInfo, p1, p2,p3).ToList();
+        //    var t = _pscontext.Timetables.FromSqlRaw(sqlTimetableInfo, p1, p2).ToList();
+        //    var psals = _pscontext.PSALS.FromSqlRaw(sqlpsALSInfo, p1, p2).ToList();
+        //    var pmals = _pmcontext.PMALS.FromSqlRaw(sqlpmALSInfo, p1, p2).ToList();
+        //    return View();
+        //}
 }
