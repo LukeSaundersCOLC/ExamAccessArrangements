@@ -1,0 +1,33 @@
+﻿@model ExamAccessArrangements.ViewModels.StudentInfo
+@{
+    ViewData["Title"] = "Testing";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Testing</h1>
+<table class="table">
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Student.Forename)
+            <td>
+                @Html.DisplayFor(modelItem => Model.Student.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Student.OtherForenames)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Student.KnownAs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Student.Username)
+            </td>
+            <td>
+                 @Html.ValueFor(modelItem => Model.Student.DateOfBirth, "{0:dd/MM/yyyy}")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Student.RefNo)
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -9,9 +9,13 @@ namespace ExamAccessArrangements.Data
             : base(options)
         {
         }
-        public virtual DbSet<StudentInfo> Student { get; set; } = null!;
+
+
+        public virtual DbSet <Student> Students{ get; set; } = null!;
         public virtual DbSet<EnrolmentInfo> Enrolment { get; set; } = null!;
         public virtual DbSet<TimetableInfo> Timetables { get; set; } = null!;
         public virtual DbSet<PSALSInfo> PSALS { get; set; } = null!;
+
+
     }
 }
