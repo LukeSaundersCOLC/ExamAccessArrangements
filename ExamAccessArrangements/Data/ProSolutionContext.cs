@@ -15,6 +15,7 @@ namespace ExamAccessArrangements.Data
         public virtual DbSet<EnrolmentInfo> Enrolment { get; set; } = null!;
         public virtual DbSet<TimetableInfo> Timetables { get; set; } = null!;
         public virtual DbSet<PSALSInfo> PSALS { get; set; } = null!;
+        public virtual DbSet<ReferralList> Referrals { get; set; } = null!;
 
 
     }
